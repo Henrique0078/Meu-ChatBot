@@ -9,7 +9,8 @@ Este tutorial fornece instruções para iniciar a API Jarvis, que responde a per
 Primeiro, você precisa clonar o repositório que contém o código da API. Execute o seguinte comando no terminal:
 
 ```bash
-git clone 
+git clone https://github.com/Henrique0078/Meu-ChatBot.git
+```
 
 ## Passo 2: Navegue para o Diretório do Projeto
 
@@ -17,7 +18,7 @@ Após clonar o repositório, navegue para o diretório do projeto:
 
 ```bash
 cd jarvis-api
-
+```
 Substitua jarvis-api pelo nome do diretório onde o repositório foi clonado.
 
 ## Passo 3: Instale as Dependências
@@ -26,7 +27,7 @@ O projeto utiliza algumas bibliotecas Python que precisam ser instaladas. Essas 
 
 ```bash
 pip install -r requirements.txt
-
+```
 Isso instalará todas as bibliotecas necessárias para executar o projeto, incluindo Flask, Flask-CORS, Transformers e pandas.
 
 ## Passo 4: Inicie a API
@@ -35,7 +36,7 @@ Com as dependências instaladas, você pode iniciar o servidor Flask que executa
 
 ```bash
 python app.py
-
+```
 E pronto, agora, a API esta funcionando.
 ## Descrição do Projeto
 
