@@ -77,7 +77,7 @@ Este endpoint recebe uma pergunta em formato JSON e retorna uma resposta com bas
 {
   "question": "Sua pergunta aqui"
 }
-
+```
 #### Resposta
 
 - **Código de Status:**
@@ -91,6 +91,7 @@ Este endpoint recebe uma pergunta em formato JSON e retorna uma resposta com bas
   "question": "Sua pergunta aqui",
   "answer": "Resposta fornecida pela IA"
 }
+```
 - **Exemplo de Resposta:**
 
 ```json
@@ -98,6 +99,7 @@ Este endpoint recebe uma pergunta em formato JSON e retorna uma resposta com bas
   "question": "Qual sua linguagem de programação preferida?",
   "answer": "Python é minha linguagem de programação preferida."
 }
+```
 #### Erros
 
 - **400 Bad Request:** Retornado quando o corpo da requisição está ausente ou malformado, ou quando a pergunta não é fornecida.
@@ -108,3 +110,4 @@ Este endpoint recebe uma pergunta em formato JSON e retorna uma resposta com bas
 {
   "error": "No question provided"
 }
+```
