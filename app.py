@@ -34,6 +34,10 @@ def ask_question_with_fallback(question):
     # Se não estiver, utiliza o modelo de QA
     return ask_question(question)
 
+@app.route('/')
+def teste():
+    return "Jarvis está no Ar."
+
 @app.route('/ask', methods=['POST'])
 def ask():
     data = request.json
