@@ -1,6 +1,13 @@
-flask
-flask-cors
-transformers
-pandas
-torch
-tensorflow
+# Flask e CORS
+flask==2.3.0
+flask-cors==3.1.1
+
+# Transformers com suporte para PyTorch ou TensorFlow
+transformers==4.32.0
+
+# Dependências de aprendizado de máquina
+torch==2.0.1  # Verifique se esta versão é compatível com a sua versão do transformers
+tensorflow==2.13.0  # Verifique se esta versão é compatível com a sua versão do transformers
+
+# Pandas
+pandas==2.0.3
