@@ -16,7 +16,7 @@ RUN pip install --no-cache-dir -r requirements.txt && \
 COPY . .
 
 # Exponha a porta que a aplicação usará (opcional, pois muitas plataformas ignoram isso)
-EXPOSE 8080
+EXPOSE 5000
 
 # Comando para rodar a aplicação Flask, usando a variável de ambiente PORT
-CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:$PORT", "app:app"]
+CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:5000", "app:app"]
