@@ -15,8 +15,11 @@ RUN pip install --no-cache-dir -r requirements.txt && \
 # Copie o restante do código da aplicação para o diretório de trabalho
 COPY . .
 
-# Exponha a porta que a aplicação usará (opcional, pois muitas plataformas ignoram isso)
+# Defina a variável de ambiente PORT com um valor padrão
+ENV PORT=5000
+
+# Exponha a porta que a aplicação usará
 EXPOSE 5000
 
 # Comando para rodar a aplicação Flask, usando a variável de ambiente PORT
-CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:5000", "app:app"]
+CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:${PORT}", "app:app"]
