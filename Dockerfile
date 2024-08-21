@@ -8,16 +8,15 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Instale as dependências do Python e substitua o Keras por tf-keras
-RUN pip install --no-cache-dir -r requirements.txt
-RUN pip uninstall -y keras
-RUN pip install tf-keras
+RUN pip install --no-cache-dir -r requirements.txt && \
+    pip uninstall -y keras && \
+    pip install tf-keras
 
 # Copie o restante do código da aplicação para o diretório de trabalho
 COPY . .
 
-# Exponha a porta que o Flask usa (5000)
+# Exponha a porta que a aplicação usará (opcional, pois muitas plataformas ignoram isso)
 EXPOSE 8080
 
-# Comando para rodar a aplicação Flask
-CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:8080", "app:app"]
-
+# Comando para rodar a aplicação Flask, usando a variável de ambiente PORT
+CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:$PORT", "app:app"]
