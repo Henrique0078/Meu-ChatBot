@@ -16,7 +16,7 @@ RUN pip install tf-keras
 COPY . .
 
 # Exponha a porta que o Flask usa (5000)
-EXPOSE 5000
+EXPOSE 8080
 
 # Comando para rodar a aplicação Flask
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "app:app"]
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8080", "app:app"]
