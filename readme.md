@@ -21,7 +21,8 @@ cd jarvis-api
 ```
 Substitua jarvis-api pelo nome do diretório onde o repositório foi clonado.
 
-## Passo 3: Instale as Dependências
+## Instalação normal
+### Passo 3: Instale as Dependências
 
 O projeto utiliza algumas bibliotecas Python que precisam ser instaladas. Essas bibliotecas estão listadas no arquivo `requirements.txt`. Instale as dependências executando:
 
@@ -30,7 +31,7 @@ pip install -r requirements.txt
 ```
 Isso instalará todas as bibliotecas necessárias para executar o projeto, incluindo Flask, Flask-CORS, Transformers e pandas.
 
-## Passo 4: Inicie a API
+### Passo 4: Inicie a API
 
 Com as dependências instaladas, você pode iniciar o servidor Flask que executa a API. Para isso, execute:
 
@@ -38,6 +39,18 @@ Com as dependências instaladas, você pode iniciar o servidor Flask que executa
 python app.py
 ```
 E pronto, agora, a API esta funcionando.
+
+## Instalação com docker
+### Passo 3: Build da imagem docker
+Isso ira buildar o container docker na sua maquina, em testes que eu fiz, demora cerca de 2000 segundos.
+```bash
+docker build -t meu-chatbot .
+```
+### Passo 4: Inicie a imagem docker
+Isso ira executar o container docker que o comando acima criou.
+```bash
+docker run -p 5000:5000 meu-chatbot
+```
 ## Descrição do Projeto
 
 **Jarvis** é uma inteligência artificial desenvolvida para fornecer respostas a perguntas de forma eficiente. Utilizando modelos de processamento de linguagem natural, o Jarvis pode responder a perguntas com base em um contexto pré-carregado e um conjunto de perguntas e respostas predefinidas. 
